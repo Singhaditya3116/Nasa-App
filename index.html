@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" href="https://freepngimg.com/download/space/23420-7-nasa-file.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>NASA API</title>
+
+</head>
+
+<body>
+
+  <!-- Loader -->
+  <div class="loader hidden">
+    <img src="./rocket.svg" alt="Rocket Svg">
+  </div>
+  <!-- Container -->
+  <div class="container">
+    <!-- Navigation -->
+    <div class="navigation-container">
+      <span class="background"></span>
+      <!-- Result Nav -->
+      <span class="navigation-item" id="results-nav">
+        <h3 class="clickable" id="favorites" onclick="showFavoritesCard()">Favorites</h3>
+        <h3 id="spaces">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
+        <h3 class="clickable" id="load-new" onclick="getNasaData()">Load New</h3>
+      </span>
+      <!-- Favorites Nav -->
+      <span class="navigation-item hidden" id="favorites-nav">
+        <h3 class="clickable" id="load-more" onclick="loadMoreNasaImages()">Load More NASA Images</h3>
+      </span>
+    </div>
+    <!-- Cards Container -->
+    <div class="cards-container">
+
+      <!-- <div class="card">
+        <div class="card-image">
+          <a href="#">
+            <img
+              src="https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/main_image_star-forming_region_carina_nircam_final-1280.jpg">
+          </a>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">NASHA IMAGE</h3>
+          <button id="add-favorite"
+            onclick="addToFavorite('
+            https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/main_image_star-forming_region_carina_nircam_final-1280.jpg')">Add
+            to Favorites</button>
+          <div class="details">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, facilis inventore minima eum qui nam quam,
+            earum fugit reiciendis pariatur ipsam quisquam laborum unde tenetur consequuntur aliquid officia. Debitis,
+            a.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio illum est autem velit odio saepe ea magni
+            veritatis magnam vel! Obcaecati dolores aliquam suscipit laudantium beatae esse consequuntur molestias
+            veniam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos corporis odit perspiciatis odio ab
+            aperiam id architecto unde, repellendus, omnis laudantium ipsa sequi tenetur atque sapiente, aspernatur ut.
+            Vel!
+          </div>
+          <div class="author-details">
+            <div class="date">2022-01-31</div>
+            <div class="author-name">Singh Aditya</div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+  </div>
+
+  <!-- Save Confirmation -->
+  <div class="alert" hidden>
+    <h1 id="alert-title">ADDED!</h1>
+  </div>
+
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
